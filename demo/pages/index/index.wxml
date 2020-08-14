@@ -4,6 +4,14 @@
 		<view class="page__title">Color picker</view>
 		<view class="page__desc">点击色块取色</view>
 	</view>
-	<view style="background:{{rgb}};" bindtap="toPick" class="color-block">{{rgb}}</view>
-	<color-picker darkTheme="{{true}}" title="选择颜色" subTitle="拖动滑块选择颜色" bindchangeColor="pickColor" initColor="{{rgb}}" show="{{pick}}" />
+	<view style="background:{{rgb}};" bindtap="toPick" data-key="color1" data-status="open" class="color-block">{{rgb}}</view>
+	<view class="page__hd">
+		<view class="page__title">Color picker</view>
+		<view class="page__desc">点击色块取色2</view>
+	</view>
+	<view style="background:{{info}};" bindtap="toPick" data-key="color2" data-status="open" class="color-block">{{rgb}}</view>
+
+
+	<color-picker darkTheme="{{true}}" title="选择颜色" key="color1" subTitle="拖动滑块选择颜色" bindchangeColor="pickColor" initColor="{{rgb}}" show="{{pick}}" />
+	<color-picker darkTheme="{{true}}" title="选择颜色2" key="color2" subTitle="拖动滑块选择颜色2" bindchangeColor="pickColor" initColor="{{info}}" show="{{infoPick}}" />
 </view>

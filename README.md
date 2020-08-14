@@ -122,6 +122,7 @@ Page({
 | textColor | String | 无 | 否 |弹出层文字颜色.此属性与darkTheme不能同时设置.优先级高于darkTheme属性. |
 | title | String | "请选择颜色" | 否 |弹出层中标题文字 |
 | subTitle | String | "可通过下方滑块颜色预览" | 否 |弹出层中子标题文字 |
+| key | String | 无 | 否 |在一个页面存在多个颜色选择器时,用于标识唯一颜色选择器.具体用法请参考: demo 中的示例. |
 |maskClosable | Boolean | true | 否 |点击背景蒙层是否可以关闭 |
 |bindchangeColor|eventhandler| | 否 | 取色后的回调,event.detail = {color} |
 |bindclose|eventhandler||否| 点击背景蒙层关闭掉color-picker后触发的事件|

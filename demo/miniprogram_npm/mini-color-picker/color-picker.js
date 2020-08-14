@@ -35,7 +35,12 @@ Component({
     subTitle:{
       type:String,
       value:'可通过下方滑块颜色预览',
-    }
+    },
+    /// 当页面存在多个组件时,用于标识唯一.
+    key: {
+      type: String,
+      value: ''
+    },
   },
   data: {
 
@@ -76,7 +81,8 @@ Component({
   methods: {
     onEnd() {
       this.triggerEvent('changeColor', {
-        color: this.data.colorRes
+        color: this.data.colorRes,
+        key:this.data.key
       })
     },
     changeHue: function (e) {
@@ -105,7 +111,9 @@ Component({
         this.setData({
           show: false
         });
-        this.triggerEvent('close');
+        this.triggerEvent('close',{
+          key:this.data.key
+        });
       }
     },
     preventdefault:function() {
